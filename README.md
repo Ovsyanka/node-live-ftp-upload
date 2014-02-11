@@ -1,3 +1,43 @@
+## Скрипт для синхронизации локальной директории с ftp ##
+
+### Основные возможности:
+
+* Синхронизация по требованию
+* Слежение за локальными изменениями и автоматическая загрузка на фтп
+* Указание фильтров исключения
+* Указание нескольких папок для слежения
+
+### config:
+
+```
+{
+    "localDir": ".",
+    "remoteDir": "/test/",
+    "exclude": ".git",
+    "persistant": true,
+    "ftpSettings": {
+        "host" : "127.0.0.1",
+        "port": 21,
+        "secure": true,
+        "user" : "",
+        "password" : ""
+    }
+}
+```
+
+## Using
+
+```
+    var ftpSync = require('live-ftp-sync');
+    var conf = <config>;
+    var cb = function(err) {
+      console.log(err || "done");
+    }
+    ftpSync.start(conf, cb);
+```
+
+----------------------
+
 # Live FTP Upload
 
 Watch a directory and upload any changed files via FTP.
