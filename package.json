@@ -8,8 +8,10 @@
   	"url" : "https://github.com/Ovsyanka/node-live-ftp-upload.git"
   },
   "dependencies": {
-    "ftp": "~0.3.6",
-    "async": "~0.2.10"
+    "ftp": ">= 0.3.7",
+    "async": ">= 0.9.0"
   },
-  "engine": "node >= 0.10.20"
+  "engines": {
+    "node": ">= 0.10.20"
+  }
 }

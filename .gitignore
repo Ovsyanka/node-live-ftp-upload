@@ -1,2 +1,4 @@
 node_modules
 /conf.json
+*.sublime-project
+*.sublime-workspace
